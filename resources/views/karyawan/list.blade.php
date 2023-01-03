@@ -13,7 +13,7 @@
             <th>Nama</th>
             <th>Jabatan</th>
             <th>Gaji</th>
-            <th>Edit</th>
+            <th>Link</th>
         </tr>
     </thead>
     <tbody>
