@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 
 class KaryawanController extends Controller
 {
-     public function manage()
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function manage()
     {
         $karyawan = Karyawan::paginate(20);
         return view('karyawan.manage', ['karyawans' => $karyawan]);
@@ -71,7 +76,8 @@ class KaryawanController extends Controller
         return redirect('/karyawan/manage');
     }
 
-    public function search(Request $request) {
+    public function search(Request $request)
+    {
         $q = $request->query->get('query');
         $karyawan = Karyawan::query()->where('nama', 'LIKE', "%{$q}%")->orWhere('email', 'LIKE', "%{$q}%")->paginate(20);
         return view('karyawan.list', ['karyawans' => $karyawan]);

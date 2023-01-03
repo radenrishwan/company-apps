@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KaryawanController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/logout', [HomeController::class, 'logout']);
 
 Route::prefix('karyawan')->group(function() {
     Route::get('/', [KaryawanController::class, 'list']);
@@ -29,3 +31,7 @@ Route::prefix('karyawan')->group(function() {
     Route::get('/{id}', [KaryawanController::class, 'detail']);
     Route::delete('/{id}', [KaryawanController::class, 'delete']);
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
