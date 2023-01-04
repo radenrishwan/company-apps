@@ -7,7 +7,7 @@
     </div>
 </div>
 <div class="border p-4">
-    <form action="/departement/{{ $departement->idg }}" method="post">
+    <form action="/departement/{{ $departement->id }}" method="post">
         @csrf
         @method('PUT')
 
