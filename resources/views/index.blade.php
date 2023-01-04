@@ -35,11 +35,6 @@
         <span class="d-block small opacity-50">Edit Data </span>
     </a>
 
-    <a href="" class="list-group-item rounded-3 py-3">
-        Absensi
-        <span class="d-block small opacity-50">Lihat data absensi</span>
-    </a>
-
     <a href="/logout" class="list-group-item rounded-3 py-3 list-group-item-danger">
         Keluar
         <span class="d-block small opacity-50 ">Keluar aplikasi</span>
