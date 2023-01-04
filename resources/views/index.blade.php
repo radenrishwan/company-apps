@@ -10,27 +10,37 @@
 </div>
 
 <div class="list-group list-group-checkable d-grid gap-2 border-0 w-auto mt-5">
-    <a href="/karyawan" class="list-group-item rounded-3 py-3" for="listGroupCheckableRadios1">
+    <a href="/karyawan" class="list-group-item rounded-3 py-3">
         List Karyawan
         <span class="d-block small opacity-50">Lihat semua data karyawan</span>
     </a>
 
-    <a href="/karyawan/add" class="list-group-item rounded-3 py-3" for="listGroupCheckableRadios2">
+    <a href="/karyawan/add" class="list-group-item rounded-3 py-3">
         Tambah Karyawan
         <span class="d-block small opacity-50">Tambah Karyawan baru</span>
     </a>
 
-    <a href="/karyawan/manage" class="list-group-item rounded-3 py-3" for="listGroupCheckableRadios2">
+    <a href="/karyawan/manage" class="list-group-item rounded-3 py-3">
         Edit data karyawan
         <span class="d-block small opacity-50">Edit Data Karyawan</span>
     </a>
 
-    <a href="" class="list-group-item rounded-3 py-3" for="listGroupCheckableRadios3">
+    <a href="/departement/add" class="list-group-item rounded-3 py-3">
+        Tambah data departemen
+        <span class="d-block small opacity-50">Tambah data departemen</span>
+    </a>
+
+    <a href="/departement" class="list-group-item rounded-3 py-3">
+        Edit data departemen
+        <span class="d-block small opacity-50">Edit Data </span>
+    </a>
+
+    <a href="" class="list-group-item rounded-3 py-3">
         Absensi
         <span class="d-block small opacity-50">Lihat data absensi</span>
     </a>
 
-    <a href="/logout" class="list-group-item rounded-3 py-3 list-group-item-danger" for="listGroupCheckableRadios3">
+    <a href="/logout" class="list-group-item rounded-3 py-3 list-group-item-danger">
         Keluar
         <span class="d-block small opacity-50 ">Keluar aplikasi</span>
     </a>

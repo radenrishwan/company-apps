@@ -29,8 +29,15 @@
         </div>
         <div class="mb-3">
             <label for="departemen" class="form-label">Departemen</label>
-            <input type="text" class="form-control" id="departemen" placeholder="Divisi Jaringan" name="departemen"
-                value="{{ $karyawan->departemen }}">
+            <select class="form-select" aria-label="departement" name="departemen" id="departemen">
+                @foreach($departements as $departement)
+                @if($departement->nama == $karyawan->departemen)
+                <option value="{{ $departement->nama }}" selected>{{ $departement->nama }}</option>
+                @else
+                <option value="{{ $departement->nama }}">{{ $departement->nama }}</option>
+                @endif
+                @endforeach
+            </select>
         </div>
         <!-- no tlp -->
         <div class="mb-3">

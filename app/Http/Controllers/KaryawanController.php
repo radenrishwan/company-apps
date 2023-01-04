@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Departemen;
 use App\Models\Karyawan;
 use Illuminate\Http\Request;
+use Termwind\Components\Dd;
 
 class KaryawanController extends Controller
 {
@@ -52,17 +54,19 @@ class KaryawanController extends Controller
     public function edit($id)
     {
         $karyawan = Karyawan::find($id);
+        $departements = Departemen::all();
 
         // check if not found
         if (!$karyawan) {
             return redirect('/not-found');
         }
-        return view('karyawan.edit', ['karyawan' => $karyawan]);
+
+
+        return view('karyawan.edit', ['karyawan' => $karyawan, 'departements' => $departements]);
     }
 
     public function update(Request $request, $id)
     {
-
         $karyawan = Karyawan::find($id);
 
         // check if not found
@@ -85,7 +89,9 @@ class KaryawanController extends Controller
 
     public function add()
     {
-        return view('karyawan.tambah');
+        $departements = Departemen::all();
+
+        return view('karyawan.tambah', ['departements' => $departements]);
     }
 
     public function create(Request $request)

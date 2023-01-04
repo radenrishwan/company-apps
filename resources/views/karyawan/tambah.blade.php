@@ -12,35 +12,35 @@
 
         <div class="mb-3">
             <label for="nama" class="form-label">Nama</label>
-            <input type="text" class="form-control" id="nama" placeholder="Nama Kamu" name="nama"
-                value="">
+            <input type="text" class="form-control" id="nama" placeholder="Nama Kamu" name="nama" value="">
         </div>
         <div class="mb-3">
             <label for="email" class="form-label">Alamat Email</label>
-            <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email"
-                value="">
+            <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" value="">
         </div>
         <div class="mb-3">
             <label for="jabatan" class="form-label">Jabatan</label>
-            <input type="text" class="form-control" id="jabatan" placeholder="Driver" name="jabatan"
-                value="">
+            <input type="text" class="form-control" id="jabatan" placeholder="Driver" name="jabatan" value="">
 
         </div>
         <div class="mb-3">
-            <label for="departemen" class="form-label">Departemen</label>
-            <input type="text" class="form-control" id="departemen" placeholder="Divisi Jaringan" name="departemen"
-                value="">
+            <div class="mb-3">
+                <label for="departemen" class="form-label">Departemen</label>
+                <select class="form-select" aria-label="departement" name="departemen" id="departemen">
+                    @foreach($departements as $departement)
+                    <option value="{{ $departement->nama }}">{{ $departement->nama }}</option>
+                    @endforeach
+                </select>
+            </div>
         </div>
         <!-- no tlp -->
         <div class="mb-3">
             <label for="no_telp" class="form-label">Nomor Telepon</label>
-            <input type="text" class="form-control" id="no_telp" placeholder="081212312312" name="no_telp"
-                value="">
+            <input type="text" class="form-control" id="no_telp" placeholder="081212312312" name="no_telp" value="">
         </div>
         <div class="mb-3">
             <label for="gaji" class="form-label">Gaji</label>
-            <input type="number" class="form-control" id="gaji" placeholder="20000" name="gaji"
-                value="">
+            <input type="number" class="form-control" id="gaji" placeholder="20000" name="gaji" value="">
         </div>
         <div class="mb-3">
             <label for="Alamat" class="form-label">Alamat</label>

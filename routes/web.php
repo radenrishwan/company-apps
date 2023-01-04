@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DepartemenController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KaryawanController;
 use Illuminate\Support\Facades\Auth;
@@ -30,6 +31,16 @@ Route::prefix('karyawan')->group(function() {
     Route::put('/{id}', [KaryawanController::class, 'update']);
     Route::get('/{id}', [KaryawanController::class, 'detail']);
     Route::delete('/{id}', [KaryawanController::class, 'delete']);
+});
+
+Route::prefix('departement')->group(function() {
+    Route::get('/', [DepartemenController::class, 'list']);
+    Route::get('/add', [DepartemenController::class, 'add']);
+    Route::get('/edit/{id}', [DepartemenController::class, 'edit']);
+
+    Route::post('/', [DepartemenController::class, 'create']);
+    Route::put('/{id}', [DepartemenController::class, 'update']);
+    Route::delete('/{id}', [DepartemenController::class, 'delete']);
 });
 
 Auth::routes();
